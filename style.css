@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #34495e;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+body h1 {
+    margin: 30px 0 0 0;
+}
+
+body p {
+    font-size: 20px;
+    color: #5cace2;
+}
+
+.game-container {
+    padding: 20px 30px;
+    margin: 0 auto;
+    height: 350px;
+    width: 450px;
+    position: relative;
+}
+
+.figure-container {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.figure-part {
+    display: none;
+}
+
+.wrong-letters-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.wrong-letters-container p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.wrong-letters-container span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.word {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.letter {
+    font-size: 30px;
+    border-bottom: 3px solid #2980b9;
+    margin: 0 3px;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: popup 0.5s;
+}
+
+.popup {
+    background-color: #2980b9;
+    border-radius: 5px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.popup button {
+    background-color: white;
+    color: #2980b9;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.notification-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification-container p {
+    margin: 0;
+}
+
+.notification-container.show {
+    transform: translateY(-100px);
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
