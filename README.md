@@ -1,6 +1,8 @@
 # Hangman Game
 Select a letter to figure out a hidden word in a set amount of chances
 
+[Live Demo](https://shivek-hangman-game.netlify.app/)
+
 # Project Specifications
 • Display hangman pole and figure using SVG                                                              
 • Generate a random word                                                                                 
